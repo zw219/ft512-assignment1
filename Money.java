@@ -12,9 +12,9 @@ class Money implements Expression{
 
     }
 
-    Money times(int multiplier) {
-        return new Money(amount * multiplier, currency);
-    }
+//    Money times(int multiplier) {
+//        return new Money(amount * multiplier, currency);
+//    }
 
     static Money dollar(int amount) {
         return new Dollar(amount, "USD");
@@ -33,7 +33,7 @@ class Money implements Expression{
         return amount + " " + currency;
     }
 
-    Expression plus(Money addend) {
+    public Expression plus(Expression addend) {
         return new Sum(this, addend);
     }
     public Money reduce(Bank bank, String to) {
@@ -41,6 +41,9 @@ class Money implements Expression{
         return new Money(amount / rate, to);
     }
 
+    Expression times(int multiplier) {
+        return new Money(amount * multiplier, currency);
+    }
 
 }
 
