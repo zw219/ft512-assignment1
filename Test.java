@@ -1,6 +1,6 @@
 import org.junit.Assert.*;
 
-import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.*;
 
 public class Test {
 
@@ -11,5 +11,10 @@ public class Test {
         assertEquals(10, product.amount);
         product = five.times(3);
         assertEquals(15, product.amount);
+    }
+
+    @org.junit.Test
+    public void testEquality() {
+        assertTrue(new Dollar(5).equals(new Dollar(5)));
     }
 }
