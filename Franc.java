@@ -16,8 +16,9 @@ public class Franc extends Money {
         Money money = (Money) object;
         return amount == money.amount;
     }
-
-
+    static Money franc(int amount){
+        return new Money(amount, "CHF");
+    }
 
 }
 

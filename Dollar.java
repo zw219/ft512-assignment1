@@ -1,7 +1,7 @@
 public class Dollar extends Money {
     private String currency;
 
-    public Dollar(int amount, String currency) {
+   public Dollar(int amount, String currency) {
         super(amount, currency);
     }
     String currency() {
@@ -15,6 +15,9 @@ public class Dollar extends Money {
     public boolean equals(Object object) {
         Money money = (Money) object;
         return amount == money.amount;
-
     }
+    static Money dollar(int amount) {
+        return new Money(amount, "USD");
+    }
+
 }
