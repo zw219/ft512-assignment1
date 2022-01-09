@@ -7,9 +7,9 @@ public class Franc extends Money {
         return currency;
     }
 
-    Money times(int multiplier) {
-        return new Money(amount * multiplier, currency);
-    }
+//    public Money times(int multiplier) {
+//        return new Money(amount * multiplier, currency);
+//    }
 
 //    public boolean equals(Object object) {
 //        Money money = (Money) object;
